@@ -8,6 +8,10 @@ Thanks for checking out this application
 
 **-   the best one (for now)  is facetracking     -**
 
+first you need to instal some packjes to ur eniv :
+ 
+`djtellopy` , `pygame`   
+
 **-     just run it after you connect your tello drone -**
 
 Feel free to clone the repo.
