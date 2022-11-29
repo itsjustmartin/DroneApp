@@ -6,21 +6,18 @@ from time import sleep
 import cv2
 import numpy as np
 
-cm.init()
-
 drone = tello.Tello()
 drone.connect()
 drone.streamon()
 
-global img
-print("power level : ", drone.get_battery(), " % ")
-#drone.takeoff()
+cm.init()
+
 speed = 20
 
 
 def getKeyboardInput():
     lr, fb, ud, yv = 0, 0, 0, 0
-    global speed
+    global speed  # to change the global var
     angularspeed = 22  # 22.5 so when it doubles will be 45-degree  but i cant use float
 
     if cm.getkey("8"):
@@ -69,12 +66,20 @@ def getKeyboardInput():
 
     return [lr, fb, ud, yv]
 
-if __name__== '__main__' :
+
+if __name__ == '__main__':
+
+    print("power level : ", drone.get_battery(), " % 'controler' ")
+    # drone.takeoff()
+
     while True:
         # moves
         values = getKeyboardInput()
-        print("its me keyboardcontroler")
         print(values[0], values[1], values[2], values[3])
+
+        # if values[0] == 0 & values[1] == 0 & values[2] == 0 & values[3] == 0:
+        # print("------")
+        # else:  #its causing errors idk
         drone.send_rc_control(values[0], values[1], values[2], values[3])
         # camera
         img = drone.get_frame_read().frame

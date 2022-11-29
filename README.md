@@ -6,17 +6,23 @@ Thanks for checking out this application
 
 **--- many apps to try ---**
 
-**-   the best one (for now)  is facetracking     -**
+**- the best one (for now)  is facetracking -**
 
-first you need to instal some packjes to ur eniv :
- 
-`djtellopy` , `pygame`   
+# Dependencies
 
-**-     just run it after you connect your tello drone -**
+haarcascade files
+djitellopy
+opencv-python
+pygame
+
+install with: <br>
+bash: <b> pip3 install -r requirements.txt </b>
+
+**- just run it after you connect your tello drone -**
 
 Feel free to clone the repo.
 
-You need a `Tello` Drone and connect it is  its own wifi
+You need a `Tello` Drone and connect it is its own wifi
 
 ## Desription
 
@@ -42,23 +48,23 @@ tello drone contoler `keyboardcontoler`
 
 drone camera reciver
 
-  you can take a pic with c key 
+you can take a pic with c key
 
-mapping app `beta`  
+mapping app `beta`
 
-  Draws the path in which the drone moved
+Draws the path in which the drone moved
 
-## Face Tracking 
-   -- it just need mor statics improvment -- 
+## Face Tracking
 
-   it will find your face and draw a rectangle
+-- it just need mor statics improvment --
 
-   The drone will move to follow your face 
+it will find your face and draw a rectangle
+
+The drone will move to follow your face
 
        **- make sure you smile to camera -** 
 
 **--------------------**
-
 
 ## Feedback
 
